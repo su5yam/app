@@ -15,7 +15,7 @@ class Homepage extends StatelessWidget {
           child: Text('bruh $days $name'),
         ),
       ),
-      drawer: Drawer(),
+      //drawer: Drawer(),
     );
   }
 }

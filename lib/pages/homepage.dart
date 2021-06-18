@@ -16,7 +16,6 @@ class Homepage extends StatelessWidget {
         ),
       ),
       drawer: Drawer(),
-      backgroundColor: Colors.grey,
     );
   }
 }

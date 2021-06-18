@@ -45,6 +45,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(
                 height: 20.0,
+                width: 20.0,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
@@ -80,6 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     SizedBox(
                       height: 40.0,
+                      width: 40.0,
                     ),
                     Material(
                       color: Colors.deepPurple,

@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: "Enter Username", labelText: "Username"),
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return "Username Daal";
+                          return "Enter Username";
                         }
                         return null;
                       },
@@ -72,9 +72,9 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: "Enter Password", labelText: "Password"),
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return "Password Daal";
+                          return "Enter Password";
                         } else if (value.length < 6) {
-                          return "Lamba Password Daal";
+                          return "Enter long Password ";
                         }
                         return null;
                       },

@@ -2,7 +2,6 @@ import 'package:app/models/catalog.dart';
 import 'package:app/utils/route.dart';
 import 'package:app/widgets/home_widgets/catalog_header.dart';
 import 'package:app/widgets/home_widgets/catalog_list.dart';
-import 'package:app/widgets/themes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -40,13 +39,16 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pushNamed(context, MyRoutes.cartRoute);
         },
-        child: Icon(CupertinoIcons.cart),
-        backgroundColor: MyTheme.darkBluishColor,
+        child: Icon(
+          CupertinoIcons.cart,
+          color: Colors.white,
+        ),
+        backgroundColor: context.theme.buttonColor,
       ),
       body: SafeArea(
         child: Container(

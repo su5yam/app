@@ -1,5 +1,6 @@
 import 'package:app/utils/route.dart';
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -29,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: context.canvasColor,
       child: SingleChildScrollView(
         child: Form(
           key: _formKey,
@@ -42,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
               Text(
                 "Welcome $name",
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-              ),
+              ).py16(),
               SizedBox(
                 height: 20.0,
                 width: 20.0,
@@ -53,6 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   children: [
                     TextFormField(
+                      // style: TextStyle(color: context.accentColor),
                       decoration: InputDecoration(
                           hintText: "Enter Username", labelText: "Username"),
                       validator: (value) {
@@ -68,6 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     TextFormField(
                       obscureText: true,
+                      // style: TextStyle(color: context.accentColor),
                       decoration: InputDecoration(
                           hintText: "Enter Password", labelText: "Password"),
                       validator: (value) {
@@ -84,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                       width: 40.0,
                     ),
                     Material(
-                      color: Colors.deepPurple,
+                      color: context.theme.buttonColor,
                       borderRadius:
                           BorderRadius.circular(changeButton ? 50 : 8),
                       child: InkWell(
@@ -100,7 +103,7 @@ class _LoginPageState extends State<LoginPage> {
                                   color: Colors.white,
                                 )
                               : Text(
-                                  "login",
+                                  "Login",
                                   style: (TextStyle(
                                       color: Colors.white,
                                       fontSize: 16,

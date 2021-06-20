@@ -1,14 +1,5 @@
 class CatalogModel {
-  static List<Item> items = [
-    Item(
-      id: 1,
-      name: "Galaxy S21",
-      desc: "New samsung Phone",
-      price: 999,
-      color: "#33505a",
-      image: "https://img.pngio.com/-samsung-png-777_588.png",
-    )
-  ];
+  static List<Item> items = [];
 }
 
 class Item {

@@ -13,7 +13,7 @@ class CartPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          _CartListState().p32().expand(),
+          _CartList().p32().expand(),
           Divider(),
           _CartTotal(),
         ],
@@ -54,20 +54,30 @@ class _CartTotal extends StatelessWidget {
   }
 }
 
-class _CartListState extends StatelessWidget {
+class _CartList extends StatefulWidget {
+  @override
+  __CartListState createState() => __CartListState();
+}
+
+class __CartListState extends State<_CartList> {
   final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: _cart.items.length,
-      itemBuilder: (context, index) => ListTile(
-        leading: Icon(Icons.done),
-        trailing: IconButton(
-          icon: Icon(Icons.remove),
-          onPressed: () {},
-        ),
-        title: _cart.items[index].name.text.make(),
-      ),
-    );
+    return _cart.items.isEmpty
+        ? "Nothing To Show".text.xl.makeCentered()
+        : ListView.builder(
+            itemCount: _cart.items.length,
+            itemBuilder: (context, index) => ListTile(
+              leading: Icon(Icons.done),
+              trailing: IconButton(
+                icon: Icon(Icons.remove),
+                onPressed: () {
+                  _cart.remove(_cart.items[index]);
+                  setState(() {});
+                },
+              ),
+              title: _cart.items[index].name.text.make(),
+            ),
+          );
   }
 }

@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:app/widgets/drawer.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -65,9 +66,7 @@ class _HomepageState extends State<Homepage> {
           ),
         ),
       ),
-      drawer: Drawer(
-        elevation: 10,
-      ),
+      drawer: MyDrawer(),
     );
   }
 }

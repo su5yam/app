@@ -20,8 +20,13 @@ class MyDrawer extends StatelessWidget {
               child: UserAccountsDrawerHeader(
                 decoration: BoxDecoration(color: context.cardColor),
                 margin: EdgeInsets.zero,
-                accountName: Text("Su5yam"),
-                accountEmail: Text("suryamla***4@gmail.com"),
+                accountName:
+                    "Su5yam".text.color(context.theme.buttonColor).bold.make(),
+                accountEmail: "suryamla***4@gmail.com"
+                    .text
+                    .color(context.theme.buttonColor)
+                    .lg
+                    .make(),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(imageUrl),
                 ),
@@ -32,14 +37,15 @@ class MyDrawer extends StatelessWidget {
               child: ListTile(
                 leading: Icon(
                   CupertinoIcons.home,
-                  color: Colors.white,
+                  color: context.theme.buttonColor,
                   size: 30.0,
                 ),
                 title: Text(
                   "Home",
                   textScaleFactor: 1.2,
                   style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                      color: context.theme.buttonColor,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -48,14 +54,15 @@ class MyDrawer extends StatelessWidget {
               child: ListTile(
                 leading: Icon(
                   CupertinoIcons.profile_circled,
-                  color: Colors.white,
+                  color: context.theme.buttonColor,
                   size: 30.0,
                 ),
                 title: Text(
                   "Profile",
                   textScaleFactor: 1.2,
                   style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                      color: context.theme.buttonColor,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -64,14 +71,49 @@ class MyDrawer extends StatelessWidget {
               child: ListTile(
                 leading: Icon(
                   CupertinoIcons.mail,
-                  color: Colors.white,
+                  color: context.theme.buttonColor,
                   size: 30.0,
                 ),
                 title: Text(
                   "Mail",
                   textScaleFactor: 1.2,
                   style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                      color: context.theme.buttonColor,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                leading: Icon(
+                  CupertinoIcons.star,
+                  color: context.theme.buttonColor,
+                  size: 30.0,
+                ),
+                title: Text(
+                  "Rate Us",
+                  textScaleFactor: 1.2,
+                  style: TextStyle(
+                      color: context.theme.buttonColor,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                leading: Icon(
+                  CupertinoIcons.book,
+                  color: context.theme.buttonColor,
+                  size: 30.0,
+                ),
+                title: Text(
+                  "Privacy Policy",
+                  textScaleFactor: 1.2,
+                  style: TextStyle(
+                      color: context.theme.buttonColor,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
             ),

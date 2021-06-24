@@ -48,12 +48,6 @@ class HomeDetailPage extends StatelessWidget {
                           .bold
                           .make(),
                       catalog.desc.text.color(Colors.grey).xl.make(),
-                      SizedBox(height: 10),
-                      "Clita No invidunt amet sed amet. lorem eirmod sea no amet et. Diam et clita lorem sanctus sea, at kasd amet consetetur labore amet sit."
-                          .text
-                          .color(Colors.grey)
-                          .make()
-                          .p20()
                     ],
                   ).py64(),
                 ),
